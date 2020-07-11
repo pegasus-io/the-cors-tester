@@ -25,3 +25,14 @@ export AUTH0_CLIENT_SECRET=ver7S3cr3t
 export AUTH0_CALLBACK_URL=https://someservice.pegasusio.io:8459/ether
 npm i && npm run dev
 ```
+
+* I created an account on Auth0 public website, to get free features of their SASS, then I created an _Application_, standing for my running application instance (every instacne shoudl havee its own _Application_) : 
+* and then I got in the dashboard of my Aut0 Accoutn, for the created aplication settings : 
+
+```bash
+# .env
+AUTH0_CLIENT_ID=N9Sa4YRY8hLnxLcTFqQM3Bfo32cQMMOY
+AUTH0_DOMAIN=pegasusio.eu.auth0.com
+AUTH0_CLIENT_SECRET=YOUR_CLIENT_SECRET
+```
+
