@@ -158,3 +158,24 @@ a {
   background-size: cover;
 }
 
+.xorigin {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  height: 30vh;
+  width: 20vw;
+
+  padding: 1vw;
+
+  background-size: cover;
+
+  font-family: var(--core-font);
+}
+
+.photo {
+  background: url("https://randomuser.me/api/portraits/med/women/18.jpg") left bottom;
+  background-size: cover;
+}
