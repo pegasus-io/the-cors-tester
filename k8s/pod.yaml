@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: story-tester-pod
+  namespace: default
+spec:
+  containers:
+    - name: story-tester-pod
+      image: registry.quay.io/gravitee/cors_air.git:cors_air-cvladt44ie41ofU
+      volumeMounts:
+        # name must match the volume name below
+        - name: authzero-application-secrets
+          mountPath: /etc/gravitee-secrets
+  # The secret data is exposed to Containers in the Pod through a Volume.
+  imagePullSecrets:
+    - name: quay-access-token
+    - name: glab-personal-access-token
+  volumes:
+    - name: authzero-application-secrets
+      secret:
+        secretName: authzero-application
+      ports:
+      - containerPort: 3000
