@@ -43,4 +43,4 @@ echo " --   you must configure the Auth0 _Application_ you created, to allow one
 echo " --   the exact value of [${AUHT0_CALLBACK}]"
 echo ''
 ```
-* finally, and **very important** : you must configure the Auth0 _Application_ ypou created, to allow one callback url, the exact value of `${AUHT0_CALLBACK}`
+* finally, and **very important** : you must configure the `Auth0` _Application_ you created, to allow one callback url, the exact value of `${AUHT0_CALLBACK}`
