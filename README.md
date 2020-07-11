@@ -34,5 +34,13 @@ npm i && npm run dev
 AUTH0_CLIENT_ID=N9Sa4YRY8hLnxLcTFqQM3Bfo32cQMMOY
 AUTH0_DOMAIN=pegasusio.eu.auth0.com
 AUTH0_CLIENT_SECRET=YOUR_CLIENT_SECRET
-```
+# the domain name depends on where you deployed and made available your app
+export AUHT0_CALLBACK=http://2886795290-8000-cykoria04.environments.katacoda.com/callback
 
+echo ''
+echo " -- finally, and **very important** : "
+echo " --   you must configure the Auth0 _Application_ you created, to allow one callback url, of value "
+echo " --   the exact value of [${AUHT0_CALLBACK}]"
+echo ''
+```
+* finally, and **very important** : you must configure the Auth0 _Application_ ypou created, to allow one callback url, the exact value of `${AUHT0_CALLBACK}`
