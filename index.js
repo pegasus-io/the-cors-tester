@@ -27,9 +27,9 @@ const strategy = new Auth0Strategy(
   },
   function(accessToken, refreshToken, extraParams, profile, done) {
     /**
-     * Access tokens are used to authorize users to an API 
+     * Access tokens are used to authorize users to an API
      * (resource server)
-     * accessToken is the token to call the Auth0 API 
+     * accessToken is the token to call the Auth0 API
      * or a secured third-party API
      * extraParams.id_token has the JSON Web Token
      * profile has all the information from the user
@@ -41,6 +41,14 @@ const strategy = new Auth0Strategy(
 if (app.get("env") === "production") {
   session.cookie.secure = true; // Serve secure cookies, requires HTTPS
 }
+
+/// JBL CORS middleware
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "https://allowed.somecomp.io");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, X-Requested-With");
+  next();
+});
+
 
 app.use(expressSession(session));
 passport.use(strategy);
